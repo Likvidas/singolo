@@ -140,6 +140,7 @@ a {
 
 .item__link:hover {
     border-bottom: 1px solid #f06c64;
+    color: #f06c64;
 }
 
 /* ========== main ========== */
