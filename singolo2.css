@@ -60,6 +60,7 @@ p,
 a {
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 .container {
@@ -97,12 +98,10 @@ a {
     line-height: 30px;
     color: #767e9e;
     font-weight: 300;
-    margin-bottom: 10px;
+    margin-bottom: 9px;
     text-align: justify;
     letter-spacing: -0.2px;
 }
-
-.portfolio__btn-list {}
 
 .portfolio__btn-item {
     display: inline-block;
@@ -113,10 +112,19 @@ a {
     padding: 3px 6px;
     border: 1px solid #767e9e;
     border-radius: 6px;
-    min-width: 29px;
-    margin-right: 10px;
-    margin-bottom: 18px;
-    text-align: center;
+    margin-right: 7px;
+    margin-bottom: 19px;
+    text-align: justify;
+}
+
+.portfolio__btn-item:hover {
+    cursor: pointer;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.portfolio__btn-item:first-child {
+    margin-left: 1px;
 }
 
 .portfolio__gallery {
@@ -140,8 +148,6 @@ a {
 .portfolio__gallery-item:nth-child(4n) {
     margin-right: 0px;
 }
-
-.portfolio__gallery-img {}
 
 /* ========== about ========== */
 
@@ -177,7 +183,7 @@ a {
 }
 
 .about__user-cards {
-    padding-bottom: 67px;
+    padding-bottom: 61px;
 }
 
 .about__user-list {
@@ -201,7 +207,7 @@ a {
 }
 
 .about__user-img {
-    margin-bottom: 19px;
+    margin-bottom: 16px;
 }
 
 .about__user-title {
@@ -209,18 +215,29 @@ a {
     line-height: 18px;
     color: #666d89;
     font-weight: 900;
-    margin-bottom: 18px;
+    margin-bottom: 10px;
+    text-align: justify;
+    letter-spacing: -0.2px;
 }
 
 .about__user-text {
     font-size: 12px;
-    line-height: 22px;
+    line-height: 20px;
     color: #767e9e;
     font-weight: 400;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
+    text-align: justify;
+    letter-spacing: -0.18px;
 }
 
-.icons {
-    margin-right: 3px;
+.icon {
+    margin-right: 2px;
     text-decoration: none;
+    opacity: 0.5;
+}
+
+.icon:hover {
+    opacity: 1;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px #666d89;
 }
