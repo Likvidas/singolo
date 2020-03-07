@@ -398,6 +398,11 @@ a {
     margin-right: 0px;
 }
 
+.portfolio__gallery-item:nth-child(n+13) {
+    display: none;
+}
+
+
 /* ========== about ========== */
 
 .about {
@@ -472,7 +477,10 @@ a {
     font-weight: 900;
     margin-bottom: 10px;
     text-align: justify;
-    letter-spacing: -0.2px;
+    letter-spacing: -0.02px;
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .about__user-text {
@@ -482,7 +490,7 @@ a {
     font-weight: 400;
     margin-bottom: 24px;
     text-align: justify;
-    letter-spacing: -0.18px;
+    letter-spacing: -0.1px;
 }
 
 .social-icons {
@@ -593,7 +601,7 @@ a {
     border-radius: 5px;
     border: 1px solid #d6564f;
     width: 597px;
-    padding: 10px 10px 11px;
+    padding: 10px 6px 11px 14px;
     outline: none;
     -webkit-transition: .3s;
     transition: .3s;
@@ -607,7 +615,7 @@ a {
 .form__inp::-webkit-input-placeholder {
     font-family: "Lato";
     font-size: 12px;
-    line-height: 22px;
+    line-height: 20px;
     color: #f48c8f;
     font-weight: 400;
 }
@@ -615,7 +623,7 @@ a {
 .form__inp::-moz-placeholder {
     font-family: "Lato";
     font-size: 12px;
-    line-height: 22px;
+    line-height: 20px;
     color: #f48c8f;
     font-weight: 400;
 }
@@ -623,7 +631,7 @@ a {
 .form__inp:-ms-input-placeholder {
     font-family: "Lato";
     font-size: 12px;
-    line-height: 22px;
+    line-height: 20px;
     color: #f48c8f;
     font-weight: 400;
 }
@@ -631,7 +639,7 @@ a {
 .form__inp::-ms-input-placeholder {
     font-family: "Lato";
     font-size: 12px;
-    line-height: 22px;
+    line-height: 20px;
     color: #f48c8f;
     font-weight: 400;
 }
@@ -639,9 +647,17 @@ a {
 .form__inp::placeholder {
     font-family: "Lato";
     font-size: 12px;
-    line-height: 22px;
+    line-height: 20px;
     color: #f48c8f;
     font-weight: 400;
+}
+
+.form__inp:focus:invalid {
+    outline: 3px dotted #d31b11;
+}
+
+.form__inp:focus:valid {
+    outline: 1px solid #833838;
 }
 
 .form__text {
@@ -727,7 +743,7 @@ a {
     line-height: 21px;
     color: #f0d8d9;
     font-weight: 400;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     text-align: justify;
     letter-spacing: -.13px;
 }
@@ -739,6 +755,7 @@ a {
     font-weight: 400;
     -webkit-transition: .3s;
     transition: .3s;
+    letter-spacing: -0.2px;
 }
 
 .contacts-info__link:hover {
