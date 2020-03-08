@@ -1,1 +1,1 @@
-# singolo
+https://likvidas.github.io/singolo/
