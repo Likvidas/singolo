@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="home">
         <div class="container">
             <div class="wrapper-header">
                 <h1 class="header__logo">singolo</h1>
@@ -17,19 +17,19 @@
                 <div class="header__nav">
                     <ul class="nav-list">
                         <li class="list__item">
-                            <a href="#" class="item__link active">home</a>
+                            <a href="#home" class="item__link active">home</a>
                         </li>
                         <li class="list__item">
-                            <a href="#" class="item__link">services</a>
+                            <a href="#services" class="item__link">services</a>
                         </li>
                         <li class="list__item">
-                            <a href="#" class="item__link">portfolio</a>
+                            <a href="#portfolio" class="item__link">portfolio</a>
                         </li>
                         <li class="list__item">
-                            <a href="#" class="item__link">about</a>
+                            <a href="#about" class="item__link">about</a>
                         </li>
                         <li class="list__item">
-                            <a href="#" class="item__link">contact</a>
+                            <a href="#contact" class="item__link">contact</a>
                         </li>
                     </ul>
                 </div>
@@ -46,14 +46,20 @@
             <div class="main__content">
                 <img src="./assets/img/chev-1.png" alt="prev" class="main__btn prev">
                 <img src="./assets/img/iphone-y.png" alt="vertical-iphone" class="vertical-iphone">
+                <div class="bg-black-vertical hidden"></div>
+                <!-- /.bg-black-vertical -->
                 <img src="./assets/img/iphone-x.png" alt="horizontaal-iphone" class="horizontaal-iphone">
+                <div class="bg-black-horizontal hidden"></div>
+                <!-- /.bg-black-horizontal -->
                 <img src="./assets/img/chev.png" alt="next" class="main__btn next">
+                <img src="./assets/img/slide-2.png" alt="phones" class="slide-2 hidden">
             </div>
             <!-- /.main__content -->
         </div>
         <!-- /.container -->
     </main>
     <!-- /.main -->
+    <div class="anchor" id="services"></div>
     <section class="service">
         <div class="container">
             <h2 class="service__title">Our Services</h2>
@@ -179,6 +185,7 @@
         <!-- /.container -->
     </section>
     <!-- /.service -->
+    <div class="anchor" id="portfolio"></div>
     <section class="portfolio">
         <div class="container">
             <h2 class="portfolio__title">Portfolio</h2>
@@ -188,13 +195,13 @@
             </p>
             <!-- portfolio__text -->
             <ul class="portfolio__btn-list">
-                <li class="portfolio__btn-item portfolio__active-btn">All</li>
+                <li class="portfolio__btn-item portfolio__active-btn" id="all">All</li>
                 <!-- portfolio__btn-item -->
-                <li class="portfolio__btn-item">Web Design</li>
+                <li class="portfolio__btn-item" id="web-desing">Web Design</li>
                 <!-- portfolio__btn-item -->
-                <li class="portfolio__btn-item">Graphic Design</li>
+                <li class="portfolio__btn-item" id="grafic-desing">Graphic Design</li>
                 <!-- portfolio__btn-item -->
-                <li class="portfolio__btn-item">Artwork</li>
+                <li class="portfolio__btn-item" id="artwork">Artwork</li>
                 <!-- portfolio__btn-item -->
             </ul>
             <div class="portfolio__gallery">
@@ -255,6 +262,7 @@
         <!-- /.container -->
     </section>
     <!-- /.portfolio -->
+    <div class="anchor" id="about"></div>
     <section class="about">
         <div class="container">
             <h2 class="about__title">About Us</h2>
@@ -360,15 +368,17 @@
                 <form action="" class="quote__form">
                     <ul class="form__list">
                         <li class="form__item">
-                            <input type="text" class="form__inp" name="name" placeholder="Name (Required)" required>
+                            <input type="text" class="form__inp name-inp" name="name" placeholder="Name (Required)"
+                                required>
                         </li>
                         <!-- /.form__item -->
                         <li class="form__item">
-                            <input type="email" class="form__inp" name="email" placeholder="Email (Required)" required>
+                            <input type="email" class="form__inp email-inp" name="email" placeholder="Email (Required)"
+                                required>
                         </li>
                         <!-- /.form__item -->
                         <li class="form__item">
-                            <input type="text" class="form__inp" name="subject" placeholder="Subject">
+                            <input type="text" class="form__inp subject-inp" name="subject" placeholder="Subject">
                         </li>
                         <!-- /.form__item -->
                         <li class="form__item">
@@ -384,6 +394,7 @@
                     <!-- /.form__list -->
                 </form>
                 <!-- /.quote__form -->
+                <div class="anchor" id="contact"></div>
                 <div class="quote__contacts">
                     <h3 class="contacts__title">Contact Information</h3>
                     <!-- /.contacts__title -->
@@ -417,6 +428,16 @@
                 <!-- /.quote__contacts -->
             </div>
             <!-- /.quote__inner -->
+            <div class="modal-block hidden">
+                <div class="message">
+                    <div class="message-title">Письмо отправлено</div>
+                    <div class="subject-out">Тема: </div>
+                    <div class="describe-out">Описание: </div>
+                    <button class="modal-block__btn">OK</button>
+                </div>
+                <!-- /.message -->
+            </div>
+            <!-- /.message-block -->
         </div>
         <!-- /.container -->
     </section>
@@ -447,6 +468,9 @@
         <!-- /.container -->
     </footer>
     <!-- /.footer -->
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>

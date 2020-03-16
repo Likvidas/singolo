@@ -71,10 +71,20 @@ a {
     margin: 0 auto;
 }
 
+.anchor {
+    display: block;
+    position: relative;
+    top: -95px;
+    visibility: hidden;
+}
+
 /* ========== header ========== */
 
 .header {
     background-color: #2d303a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .header::after {
@@ -181,12 +191,15 @@ a {
     align-items: center;
     padding-top: 52px;
     padding-bottom: 57px;
+    position: relative;
 }
 
 .main__btn {
     opacity: 0.5;
     -webkit-transition: .3s;
     transition: .3s;
+    position: relative;
+    z-index: 99;
 }
 
 .main__btn:hover {
@@ -205,11 +218,49 @@ a {
 
 .vertical-iphone {
     margin-left: -1px;
+    cursor: pointer;
 }
 
 .horizontaal-iphone {
     margin-left: 71px;
     margin-top: -1px;
+    cursor: pointer;
+}
+
+.bg-black-vertical {
+    position: absolute;
+    width: 190px;
+    height: 335px;
+    background-color: #000000;
+    border: 2px solid #000000;
+    border-radius: 3px;
+    top: 116px;
+    left: 83px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.bg-black-horizontal {
+    position: absolute;
+    width: 335px;
+    height: 190px;
+    background-color: #000000;
+    border: 2px solid #000000;
+    border-radius: 3px;
+    top: 186px;
+    right: 160px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.slide-2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 606px;
+    width: 1020px;
+    z-index: 3;
 }
 
 /* ========== services ========== */
@@ -366,7 +417,6 @@ a {
 .portfolio__active-btn {
     color: #ffffff;
     border-color: #ffffff;
-    padding-right: 8px;
 }
 
 .portfolio__btn-item:hover {
@@ -377,6 +427,7 @@ a {
 
 .portfolio__btn-item:first-child {
     margin-left: 1px;
+    padding-right: 8px;
 }
 
 .portfolio__gallery {
@@ -398,9 +449,14 @@ a {
 
 .portfolio__gallery-item {
     -webkit-box-flex: 0;
-    flex: 0 0 220px;
+    flex: 0 1 220px;
     margin-right: 20px;
     margin-bottom: 17px;
+    max-width: 220px;
+}
+
+.bordered {
+    outline: 5px solid #F06C64;
 }
 
 .portfolio__gallery-item:nth-child(4n) {
@@ -800,6 +856,64 @@ a {
 
 .btn-submit:hover {
     color: #d6c8c8;
+}
+
+.modal-block {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #949494;
+    opacity: 0.9;
+    z-index: 101;
+}
+
+.hidden {
+    display: none;
+}
+
+.message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2d303a;
+    border: 2px solid #f48c8f;
+    color: #f0d8d9;
+    padding: 10px 30px 10px 30px;
+    min-width: 500px;
+    max-width: 800px;
+    max-height: 500px;
+    overflow: auto;
+}
+
+.message-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px auto;
+}
+
+.subject-out {
+    margin: 10px auto;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.describe-out {
+    margin: 10px auto;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.modal-block__btn {
+    display: block;
+    background-color: #a75b5d;
+    text-align: center;
+    color: #d6c8c8;
+    padding: 6px;
+    width: 60px;
+    margin: 20px auto;
 }
 
 /* ========== footer ========== */
