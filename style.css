@@ -71,7 +71,6 @@ a {
     width: 940px;
     margin: 0 auto;
     position: relative;
-    /* overflow: hidden; */
 }
 
 .anchor {
@@ -85,6 +84,7 @@ a {
 
 .header {
     background-color: #2d303a;
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -185,33 +185,131 @@ a {
     background-color: #ea676b;
 }
 
+.carousel-wrapper {
+    width: 100%;
+    height: 594px;
+    position: relative;
+}
+
 .main__content {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: #f06c64;
+    padding-top: 52px;
+    padding-bottom: 57px;
+    position: relative;
+}
+
+.slides {
+    display: none;
+    -webkit-animation: .5s ease-in-out;
+    animation: .5s ease-in-out;
+}
+
+.slides-next {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+.slides-active {
     display: -webkit-box;
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
     -webkit-box-align: center;
     align-items: center;
-    padding-top: 52px;
-    padding-bottom: 57px;
-
-}
-
-.main__btn {
-    opacity: 0.5;
-    -webkit-transition: .3s;
-    transition: .3s;
-    z-index: 99;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row nowrap;
 }
 
 .slide-2 {
     position: absolute;
     top: 0;
-    left: 980px;
+    left: 0;
     height: 606px;
     width: 1020px;
-    z-index: 3;
-    transition: .7s;
+}
+
+.to-left {
+    -webkit-animation-name: left;
+    animation-name: left;
+}
+
+.to-right {
+    -webkit-animation-name: right;
+    animation-name: right;
+    animation-direction: reverse;
+}
+
+.from-left {
+    -webkit-animation-name: left;
+    animation-name: left;
+    animation-direction: reverse;
+}
+
+.from-right {
+    -webkit-animation-name: right;
+    animation-name: right;
+}
+
+@-webkit-keyframes left {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes left {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: -100%;
+    }
+}
+
+@-webkit-keyframes right {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+@keyframes right {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+.main__btn {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-top: -2px;
+    opacity: 0.5;
+    -webkit-transition: .3s;
+    transition: .3s;
+    z-index: 99;
 }
 
 .main__btn:hover {
@@ -220,16 +318,15 @@ a {
 }
 
 .prev {
-    margin-right: 54px;
-    padding-left: 2px;
+    left: 4%;
 }
 
 .next {
-    margin-left: 54px;
+    right: 4%;
 }
 
 .vertical-iphone {
-    margin-left: -1px;
+    margin-left: 1px;
     cursor: pointer;
 }
 
@@ -876,6 +973,7 @@ a {
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     background-color: #2d303a;
     border: 2px solid #f48c8f;

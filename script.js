@@ -51,40 +51,62 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const nextBtn = document.querySelector('.next');
     const prevBtn = document.querySelector('.prev');
-    const slides = document.querySelectorAll('.slide-2');
+    const slides = document.querySelectorAll('.slides');
     const verticalPhone = document.querySelector('.vertical-iphone');
     const horizontaalPhone = document.querySelector('.horizontaal-iphone');
     const bgBlackVertical = document.querySelector('.bg-black-vertical');
     const bgBlackHorizontal = document.querySelector('.bg-black-horizontal');
-    const corouseContainer = document.querySelector('.main__content');
-
-
-    let step = 1;
-
-
-    // prevBtn.addEventListener('click', () => {
-
-    //     if (step % 2 !== 0) {
-    //         slides[0].style.transform = `translateX(-100%)`
-    //     } else {
-    //         slides[0].style.transform = `translateX(-200%)`;
-    //         slides[0].style.visibility = `hidden`;
-    //         step = 0;
-    //     }
-    //     step++;
-
-    // })
-
-    // corouseContainer.style.transform = `translateX(-${size * counter}px)`
 
 
 
+    let currentSlide = 0;
+    let isEnabled = true;
 
-    // btns.forEach((elem) => {
-    //     elem.addEventListener('click', () => {
-    //         slides.classList.toggle('hidden');
-    //     });
-    // });
+    function changeCurrentSlide(n) {
+        currentSlide = (n + slides.length) % slides.length;
+    }
+
+    function hideSlide(direction) {
+        isEnabled = false;
+        slides[currentSlide].classList.add(direction);
+        slides[currentSlide].addEventListener('animationend', function () {
+            this.classList.remove('slides-active', direction);
+        })
+    }
+
+    function showSlide(direction) {
+        slides[currentSlide].classList.add('slides-next', direction);
+        slides[currentSlide].addEventListener('animationend', function () {
+            this.classList.remove('slides-next', direction);
+            this.classList.add('slides-active');
+            isEnabled = true;
+        })
+    }
+
+    function prevSlide(n) {
+        hideSlide('to-right');
+        changeCurrentSlide(n - 1);
+        showSlide('from-left');
+    }
+
+    prevBtn.addEventListener('click', function () {
+        if (isEnabled) {
+            prevSlide(currentSlide);
+        }
+    })
+
+    function nextSlide(n) {
+        hideSlide('to-left');
+        changeCurrentSlide(n + 1);
+        showSlide('from-right');
+    }
+
+    nextBtn.addEventListener('click', function () {
+        if (isEnabled) {
+            nextSlide(currentSlide);
+        }
+    })
+
 
     verticalPhone.addEventListener('click', () => {
         bgBlackVertical.classList.toggle('hidden');
