@@ -325,38 +325,42 @@ a {
 }
 
 .vertical-iphone {
-    margin-left: 1px;
+    margin-left: 2px;
     cursor: pointer;
+    width: 25.75%;
+    height: auto;
 }
 
 .horizontaal-iphone {
     margin-left: 71px;
     margin-top: -1px;
     cursor: pointer;
+    width: 51.7%;
+    height: auto;
 }
 
 .bg-black-vertical {
     position: absolute;
-    width: 186px;
-    height: 329px;
+    width: 19.6%;
+    height: 55.5%;
     background-color: #000000;
     border: 2px solid #000000;
     border-radius: 3px;
-    top: 118px;
-    left: 85px;
+    top: 19.8%;
+    left: 9.2%;
     cursor: pointer;
     z-index: 2;
 }
 
 .bg-black-horizontal {
     position: absolute;
-    width: 329px;
-    height: 186px;
+    width: 35%;
+    height: 31.2%;
     background-color: #000000;
     border: 2px solid #000000;
     border-radius: 3px;
-    top: 187px;
-    right: 162px;
+    top: 31.4%;
+    right: 17.1%;
     cursor: pointer;
     z-index: 2;
 }
@@ -1091,13 +1095,11 @@ a {
 
     /* ========== services ========== */
     .wrapper-card {
-        -webkit-box-flex: 0;
         flex: 0 1 calc(50% - 52px);
     }
 
-    /* ========== services ========== */
+    /* ========== portfolio ========== */
     .portfolio__gallery-item {
-        -webkit-box-flex: 0;
         flex: 0 1 calc(33.333% - 15px);
         max-width: 33.333%;
         margin-bottom: 20px;
@@ -1107,5 +1109,45 @@ a {
     .portfolio__gallery-img {
         width: 100%;
         height: auto;
+    }
+}
+
+@media (max-width: 767px) {
+
+    /* ========== services ========== */
+    .wrapper-card {
+        flex: 0 1 100%;
+        justify-content: start;
+        margin: 0 0 15px 0;
+    }
+
+    .card__ico {
+        margin: 0 20px 0 0;
+    }
+
+    /* ========== portfolio ========== */
+    .portfolio__btn-item {
+        margin-bottom: 25px;
+    }
+
+    .portfolio__gallery-item {
+        flex: 0 1 48.8%;
+        max-width: 50%;
+
+    }
+
+    .portfolio__gallery-img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* ========== about ========== */
+    .about__user-list {
+        flex-flow: column-reverse wrap;
+    }
+
+    .about__user-item {
+        flex: 1 0 100%;
+        min-width: 100%;
     }
 }
