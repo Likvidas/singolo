@@ -1142,11 +1142,24 @@ a {
         position: fixed;
         top: 0;
         left: 0;
-        width: 60%;
+        width: 64%;
         height: 100%;
         background-color: #2D303A;
-        padding: 40% 0 0 14.2rem;
+        padding: 28.57% 0 0 14.2rem;
         transition: all .3s ease 0s;
+    }
+
+    .header__nav.nav-active::after {
+        content: "";
+        position: absolute;
+        display: block;
+        background-color: #2D303A;
+        opacity: 0.6;
+        top: 0;
+        right: -30%;
+        width: 30%;
+        height: 100%;
+
     }
 
     .list__item {
@@ -1171,8 +1184,8 @@ a {
     .header__burger {
         display: block;
         position: relative;
-        width: 2.5rem;
-        height: 2rem;
+        width: 3rem;
+        height: 2.5rem;
         top: 4rem;
         cursor: pointer;
         z-index: 10;
@@ -1212,12 +1225,16 @@ a {
         bottom: 0;
     }
 
+    .header__logo {
+        font-size: 3rem;
+    }
+
     .header__logo.logo-active {
         position: absolute;
         z-index: 10;
-        top: 5rem;
+        top: 5.5rem;
         left: 6rem;
-        font-size: 3rem;
+
         transition: all .2s ease 0s;
     }
 
@@ -1315,5 +1332,3 @@ a {
     }
 
 }
-
-@media (max-width:374px) {}

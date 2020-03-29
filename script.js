@@ -7,9 +7,14 @@ window.addEventListener('DOMContentLoaded', () => {
     const headerNav = document.querySelector('.header__nav');
     const logo = document.querySelector('.header__logo');
 
+
     navMenu.addEventListener('click', (event) => {
         links.forEach((item) => item.classList.remove('active'));
         event.target.classList.add('active');
+        burger.classList.remove('burger-active');
+        headerNav.classList.remove('nav-active');
+        logo.classList.remove('logo-active');
+
     });
 
     document.addEventListener('scroll', () => {
@@ -46,11 +51,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
     });
 
-    burger.addEventListener('click', () => {
+    burger.addEventListener('click', function () {
         burger.classList.toggle('burger-active');
         headerNav.classList.toggle('nav-active');
         logo.classList.toggle('logo-active');
-    })
+    });
+
+
 
 
 
