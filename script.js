@@ -3,6 +3,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const navMenu = document.querySelector('.nav-list');
     const links = navMenu.querySelectorAll('a');
+    const burger = document.querySelector('.header__burger');
+    const headerNav = document.querySelector('.header__nav');
+    const logo = document.querySelector('.header__logo');
 
     navMenu.addEventListener('click', (event) => {
         links.forEach((item) => item.classList.remove('active'));
@@ -43,6 +46,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
     });
 
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('burger-active');
+        headerNav.classList.toggle('nav-active');
+        logo.classList.toggle('logo-active');
+    })
 
 
 
