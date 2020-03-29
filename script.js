@@ -146,6 +146,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const portfolioFiltr = document.querySelector('.portfolio__btn-list');
     const portfolioList = document.querySelector('.portfolio__gallery-list');
 
+
     portfolioFiltr.addEventListener('click', (event) => {
         portfolioFiltr.querySelectorAll('li').forEach((item) => {
             item.classList.remove('portfolio__active-btn');
@@ -153,9 +154,18 @@ window.addEventListener('DOMContentLoaded', () => {
         });
         event.target.classList.add('portfolio__active-btn');
 
-        portfolioList.querySelectorAll('li').forEach((element) => {
-            element.style.order = Math.floor(((Math.random() * 12) + 1));
-        });
+
+        const portfolioItem = portfolioList.querySelectorAll('li');
+        const mixedPortfolioItem = [...portfolioItem];
+        portfolioList.innerHTML = null;
+
+        for (let i = 0; i < portfolioItem.length; i++) {
+            if (i < portfolioItem.length - 1) {
+                portfolioList.appendChild(mixedPortfolioItem[i + 1])
+            } else {
+                portfolioList.appendChild(mixedPortfolioItem[0]);
+            }
+        }
 
 
     });
