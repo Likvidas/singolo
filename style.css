@@ -694,28 +694,24 @@ a {
     width: 1.4rem;
     height: 1.4rem;
     background: url("./assets/img/facebook-ico.svg") no-repeat center;
-
 }
 
 .google-ico {
     width: 1.4rem;
     height: 1.4rem;
     background: url("./assets/img/google-ico.svg") no-repeat center;
-
 }
 
 .twitter-ico {
     width: 1.4rem;
     height: 1.4rem;
     background: url("./assets/img/twitter-ico.svg") no-repeat center;
-
 }
 
 .linkedin-ico {
     width: 1.4rem;
     height: 1.4rem;
     background: url("./assets/img/linkedin-ico.svg") no-repeat center;
-
 }
 
 /* ========== quote ========== */
@@ -1100,14 +1096,6 @@ a {
         flex: 0 1 calc(50% - 5.2rem);
     }
 
-    .service__text {
-        font-size: 2.2rem;
-    }
-
-    .card__text {
-        font-size: 1.8rem;
-    }
-
     /* ========== portfolio ========== */
 
     .portfolio__text {
@@ -1142,7 +1130,7 @@ a {
         position: fixed;
         top: 0;
         left: 0;
-        width: 64%;
+        width: 60%;
         height: 100%;
         background-color: #2D303A;
         padding: 28.57% 0 0 14.2rem;
@@ -1156,8 +1144,8 @@ a {
         background-color: #2D303A;
         opacity: 0.6;
         top: 0;
-        right: -30%;
-        width: 30%;
+        right: -36%;
+        width: 36%;
         height: 100%;
 
     }
@@ -1233,8 +1221,7 @@ a {
         position: absolute;
         z-index: 10;
         top: 5.5rem;
-        left: 6rem;
-
+        left: 10.5rem;
         transition: all .2s ease 0s;
     }
 
@@ -1248,6 +1235,26 @@ a {
 
     /* ========== services ========== */
 
+    .service__title {
+        font-size: 3.6rem;
+        line-height: 2.2rem;
+    }
+
+    .service__text {
+        font-size: 2.2rem;
+        line-height: 3.2rem;
+    }
+
+    .card__title {
+        font-size: 2.2rem;
+        line-height: 1.8rem;
+    }
+
+    .card__text {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+
     .wrapper-card {
         flex: 0 1 100%;
         justify-content: start;
@@ -1260,8 +1267,21 @@ a {
 
     /* ========== portfolio ========== */
 
+    .portfolio__title {
+        font-size: 3.6rem;
+        line-height: 2.2rem;
+    }
+
+    .portfolio__text {
+        font: 2.2rem;
+        line-height: 3.2rem;
+    }
+
     .portfolio__btn-item {
         margin-bottom: 2.5rem;
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+        padding: .5rem .8rem;
     }
 
     .portfolio__gallery-item {
@@ -1276,6 +1296,20 @@ a {
     }
 
     /* ========== about ========== */
+    .about__title {
+        font-size: 3.6rem;
+        line-height: 2.2rem;
+    }
+
+    .about__text {
+        font-size: 2.2rem;
+        line-height: 3.2rem;
+    }
+
+    .about__user-cards {
+        padding-bottom: 1.1rem;
+    }
+
     .about__user-list {
         flex-flow: column-reverse wrap;
     }
@@ -1294,9 +1328,51 @@ a {
         max-width: 100%;
     }
 
+    .about__user-title {
+        font-size: 2.4rem;
+        line-height: 2.2rem;
+    }
+
+    .about__user-text {
+        font-size: 1.8rem;
+    }
+
+    .about__user-img {
+        margin-bottom: 2rem;
+    }
+
+    .social-icon__link {
+        margin-right: 1rem;
+        padding: 1rem;
+
+    }
+
+    .facebook-ico {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    .google-ico {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    .twitter-ico {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    .linkedin-ico {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    /* ========== quote ========== */
+
     .quote__inner {
         display: flex;
         flex-flow: column wrap;
+        margin-bottom: 4.2rem;
     }
 
     .quote__form {
@@ -1310,16 +1386,47 @@ a {
     .form__inp {
         max-width: 100%;
         width: 92rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        border-radius: 1rem;
+    }
+
+    .form__inp::placeholder {
+        font-size: 1.4rem;
     }
 
     .form__text {
         max-width: 100%;
         width: 92rem;
-        padding: .7rem .6rem 2.5rem 1.4rem;
+        padding: 3rem .6rem 3rem 1.4rem;
+        height: 30rem;
+        border-radius: 1rem;
+    }
+
+    .form__text::placeholder {
+        font-size: 1.4rem;
     }
 
     .btn-submit {
         width: 100%;
+        font-size: 1.8rem;
+        margin-bottom: 3.2rem;
+    }
+
+    .contacts__title {
+        font-size: 2.6rem;
+        line-height: 2.2rem;
+
+    }
+
+    .contacts__text {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+    }
+
+    .contacts-info__link {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
     }
 
     /* ========== footer ========== */
